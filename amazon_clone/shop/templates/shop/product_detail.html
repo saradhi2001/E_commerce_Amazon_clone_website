@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    <style>
+/* Add styles for login and signup forms */
+form {
+    margin: 20px 0;
+}
+
+form input,
+form button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+button {
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body style="background-color: #b8945e">
+    <header>
+        <center>
+        <h1>{{ product.name }}</h1>
+        <nav style="font-size: 25px;color: #000;">
+            <a href="/">Home</a> | 
+            <a href="/cart">Cart</a>
+
+        </nav>
+        </center>
+    </header>
+<br>
+    <main>
+        <center>
+        <div class="product-detail">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <p>${{ product.price }}</p>
+            <button> Add to Cart</button>
+        </div>
+        </center>
+    </main>
+</body>
+</html>

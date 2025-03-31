@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    background-attachment: fixed;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+header h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration:double;
+    margin: 0 20px;
+    font-size: 25px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+form input[type="text"] {
+    padding: 15px;
+    width: 500px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+form button:hover {
+    background-color: #e68900;
+}
+
+
+main {
+    padding: 80px 20px 20px; 
+}
+
+h2, h3 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.product-section {
+    margin-bottom: 30px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    background-color: rgba(249, 250, 250, 0.4);
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: -10px -0px 20px rgba(196, 240, 240,0.5),
+    50px 50px 20px rgba(196, 240, 240,0.5);
+}
+
+.product img {
+    width: 85%;
+    height: 370px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product p {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.product a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.product a:hover {
+    background-color: #e68900;
+}
+
+
+footer {
+    background-color: #131921;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    bottom: 0;
+    width: 100%;
+    font-size: 23px;
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product a {
+        padding: 6px 12px;
+    }
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden; 
+  height: 530px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  animation: slideAnimation 30s infinite; 
+}
+
+
+.image-item {
+  min-width: 100%;
+  transition: transform 20s ease;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  12.5% {
+    transform: translateX(-100%); 
+  }
+  25% {
+    transform: translateX(-200%); 
+  }
+  37.5% {
+    transform: translateX(-300%); 
+  }
+  50% {
+    transform: translateX(-400%); 
+  }
+  62.5% {
+    transform: translateX(-500%); 
+  }
+  75% {
+    transform: translateX(-600%); 
+  }
+  87.5% {
+    transform: translateX(-700%); 
+  }
+  100% {
+    transform: translateX(-800%); 
+  }
+}
+
+.productBackgraound{
+    background-color:white;
+}
+.card-product-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.card-product{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 450px;
+    box-shadow: -10px -0px 20px rgba(196, 240, 240,0.5),
+    50px 50px 20px rgba(196, 240, 240,0.5);
+    padding: 10px;
+}
+.card-product h2{
+    margin: 0;
+    padding: 10px;
+    
+}
+
+.card-product-nested-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+}
+.card-nested p{
+    margin: 5px;
+}
+.card-nested img {
+    width: 128px;
+    height: 102px;
+    object-fit: cover;
+
+}
+.card-product-btn{
+    font-size: 14px;
+    align-self: flex-start;
+    margin: 7px 10px; 
+    padding-left: 0;
+    background-color: transparent;
+    border:none;
+    color:rgb(25, 105, 105)
+}
+.card-product-btn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <header>
+        <h1>Amazon Clone</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="https://www.amazon.in/mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles">Mobiles | Tablates</a>
+            <a href="https://www.amazon.in/Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home">Home & Kitchen</a>
+            <a href="https://www.amazon.in/electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics">Electronic</a>
+            <a href="https://www.amazon.in/gp/browse.html?node=6648217031&ref_=nav_cs_fashion">Fashion</a>
+            <a href="/">Customer Service</a>
+            <a href="/cart">Cart</a>
+            {% if user.is_authenticated %}
+               
+                <a href="/logout/">Logout</a> |   <span>Welcome, {{ user.username }}</span> 
+            {% else %}
+                <a href="/login/">Login</a> | 
+                <a href="/signup/">Sign Up</a>
+            {% endif %}
+        </nav>
+        
+        <form method="GET" action="/search/">
+            <input type="text" name="query" placeholder="Search products..." required>
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    <br>
+    <section>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                  <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/71cp9PVuTfL._SX3000_.jpg" />
+                  </div>
+                  <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/71qlKqpJnlL._SX3000_.jpg" />
+                  </div>
+                  <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/71cQMXCLSvL._SX3000_.jpg" />
+                  </div>
+                  <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61aURrton0L._SX3000_.jpg" />
+                  </div>
+                  <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61O72XhcEkL._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61VuJdpjvaL._SX3000_.jpg" />
+                </div>
+                </div>
+                </div>
+    </section>
+    <br>
+    <br>
+                <div class="card-product-container container">
+                    <div class="card-product">
+                        <h2>Up to 60% off | Styles for Men</h2>
+                        <div class="card-product-nested-card">
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg" />
+                                <p>clothing</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg" />
+                                <p>Footwear</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/BAU/Oct/186X116_3._SY116_CB606110532_.jpg" />
+                                <p>Watches</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg" />
+                                <p>Bags & language</p>
+                            </div>
+                        </div>
+                        <button class="card-product-btn"><a href="https://www.amazon.in/s?k=men&crid=4M3C6HGUXS5L&sprefix=men%2Caps%2C235&ref=nb_sb_noss_2">see more </a>
+                        </button>
+                    </div>
+                    <div class="card-product">
+                        <h2>Redefine your living room</h2>
+                        <div class="card-product-nested-card">
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Furniture/furniture_node_1/372_232_03_low._SY116_CB605507312_.jpg" />
+                                <p>Sofa cum beds</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Furniture/furniture_node_1/372_232_04_low._SY116_CB605507312_.jpg" />
+                                <p>Office chairs & study</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Furniture/furniture_node_1/372_232_01_low._SY116_CB605507312_.jpg" />
+                                <p>Bean bags</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Furniture/furniture_node_1/372_232_02_low._SY116_CB605507312_.jpg" />
+                                <p>Explore all</p>
+                            </div>
+                        </div>
+                        <button class="card-product-btn">
+                        <a href="https://www.amazon.in/b/?_encoding=UTF8&node=4286640031&pd_rd_w=3VP3T&content-id=amzn1.sym.8844e7df-0ffd-4ead-86ea-172bfc8bb1a0&pf_rd_p=8844e7df-0ffd-4ead-86ea-172bfc8bb1a0&pf_rd_r=7GMPA7J9TK4W0K96V0MG&pd_rd_wg=sNg3F&pd_rd_r=fd4f772e-7399-45e4-8f36-e5e77ef8e04f&ref_=pd_hp_d_atf_unk"> Visit our furniture store 
+                            </a>
+                    </button>
+                    </div>
+                    <div class="card-product">
+                        <h2>Top rated, premium quality | Amazon Brands </h2>
+                        <div class="card-product-nested-card">
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Halos/kids._SS300_QL85_FMpng_.png" />
+                                <p>Kids Fashion</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Halos/womens._SS300_QL85_FMpng_.png" />
+                                <p>Womens clothing</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/I/71pi8yqOiBL.AC_SX500.jpg" />
+                                <p>Jewellery Items</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/BAU/Oct/186X116_8._SY116_CB606110532_.jpg" />
+                                <p>Fashion</p>
+                            </div>
+                        </div>
+                        <button class="card-product-btn"> <a href="https://www.amazon.in/gp/browse.html?node=6648217031&ref_=nav_cs_fashion">see more</a></button>
+                    </div>
+                    <div class="card-product">
+                        <h2>Top rated, premium Books, Laptops and computers| Amazon Brands</h2>
+                        <div class="card-product-nested-card">
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/I/71pEaSYkhsL._AC_UY327_FMwebp_QL65_.jpg" />
+                                <p>Premium Books</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/I/71J+OBadJCL._AC_UY327_FMwebp_QL65_.jpg" />
+                                <p>Laptops</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/I/71MCFxs5qkL._AC_UY327_FMwebp_QL65_.jpg" />
+                                <p>Computers</p>
+                            </div>
+                            <div class="card-nested">
+                                <img
+                                    src="https://m.media-amazon.com/images/I/71c8a4qWdoL._AC_UL480_FMwebp_QL65_.jpg" />
+                                <p>Washing Machine</p>
+                            </div>
+                            
+                        </div>
+                        <button class="card-product-btn"> <a href="https://www.amazon.in/electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics">see more</a></button>
+                    </div>
+                </div>
+                    </div>
+    
+    <main>
+        <h2> <center> SMART TV'S | MOBILE PHONES | ELECTRONIC ITEMS</center></h2>
+        <center style="font-size: 25px;">Shop top-rated brands and the latest technology for your home and on the go.</center>
+          <p style="color: #000000eb; background-color: rgba(196, 240, 240,0.5);font-size: 23px;"> 
+            Smart TVs integrate streaming services, voice assistants, and high-quality visuals into one device.
+            With features like 4K and 8K resolution, OLED/QLED displays, and voice control, 
+            they offer an enhanced viewing experience.
+            Brands like LG, Samsung, and Sony lead the market with cutting-edge tech. 
+            Modern smartphones offer powerful processors, high-resolution cameras, and 5G connectivity. 
+            Whether you're into gaming, photography, or productivity, phones from Apple, Samsung, and Google deliver top-tier performance.
+             They feature sleek designs, long battery life, fast charging, and impressive AI capabilities. 
+           
+        </p>
+            <div class="product-list">
+                {% for product in products %}
+                    <div class="product">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <p>${{ product.price }}</p>
+                        <a href="/product/{{ product.id }}">View Details</a>
+                    </div>
+                {% endfor %}        
+            </div>
+    </main>
+<br>
+<br>
+    <br>
+    <br>
+
+
+    <footer>
+        <p> Conditions of Use & Sale Privacy Notice Interest-Based Ads<br>&copy; 2025 Amazon Clone. All rights reserved.</p>
+        <p>Contact <br> Mobile No +91 9384739588 <br> Email Id : amazon@gmail.com
+        <br> Address:00,Main road, New Delhi, India </p>
+        </div>
+    </footer>
+</body>
+</html>
